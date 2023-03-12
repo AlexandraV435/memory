@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6563ff;
+    flex-direction: column;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background: white;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 0px 17px 4px rgba(0, 0, 0, 0.2);
+}
+
+.front-view {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 1;
+}
+
+.wrapper {
+    background: #f8f8f8;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 12vh
+}
+
+.cards, .card, .view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    height: 480px;
+    width: 480px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+ .back-view, .front-view {
+    backface-visibility: hidden;
+    transition: 0.5s
+}
+
+.back-view {
+    transform: rotateY(180deg);
+}
+
+.clicked .back-view, .show .back-view{
+    transform: rotateY(360deg);
+
+}
+.clicked .front-view, .show .front-view {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
